@@ -53,9 +53,9 @@ public class sensoresPrueba {
     public int encontrarPaciente(String nombre) {
     	int id_paciente = 0;
     	String user = "root";
-    	String password = "joseIgnacio1";
+    	String password = "tuContraseña";
     	try {
-			Connection conexion = DriverManager.getConnection("jdbc:mariadb://127.0.0.1/prueba sensores?user=" + user + "&password=" + password);
+			Connection conexion = DriverManager.getConnection("jdbc:mariadb://tuHostLocal/nombreBD?user=" + user + "&password=" + password);
 			ResultSet resultados = conexion.createStatement().executeQuery("SELECT id_paciente FROM paciente WHERE nombre =" + "'" + nombre + "'");
 			while(resultados.next()) {
 				id_paciente = resultados.getInt("id_paciente");
@@ -68,9 +68,9 @@ public class sensoresPrueba {
     
     public void verDatos(String tipo) {
     	String user = "root";
-    	String password = "joseIgnacio1";
+    	String password = "tuContraseña";
     	try {
-			Connection conexion = DriverManager.getConnection("jdbc:mariadb://127.0.0.1/prueba sensores?user=" + user + "&password=" + password);
+			Connection conexion = DriverManager.getConnection("jdbc:mariadb://tuHostLocal/nombreBD?user=" + user + "&password=" + password);
 			ResultSet resultados = conexion.createStatement().executeQuery("SELECT nombre, dato, instante FROM paciente, sensor WHERE sensor.id_paciente = paciente.id_paciente AND tipo =" + "'" + tipo + "'");
 			while(resultados.next()) {
 				if(fecha.getValue().toString().equals(resultados.getDate("instante").toString())) {
