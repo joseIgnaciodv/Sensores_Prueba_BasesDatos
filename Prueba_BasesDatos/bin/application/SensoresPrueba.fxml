@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="nombrePaciente" alignment="CENTER" layoutX="361.0" layoutY="350.0" prefHeight="36.0" prefWidth="225.0" style="-fx-background-radius: 10; -fx-background-color: white;" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <VBox layoutX="14.0" layoutY="14.0" prefHeight="392.0" prefWidth="145.0">
+         <children>
+            <Button fx:id="ritmoCardiaco" contentDisplay="TOP" mnemonicParsing="false" onAction="#mostrarRitmoCardiaco" prefHeight="58.0" prefWidth="145.0" text="Ritmo Cardiaco">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="99.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../../git/presencial-braincare/BrainCare/lib_images/ritmo_cardiaco.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="temperaturaCorporal" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#mostrarTemperatura" prefHeight="58.0" prefWidth="145.0" text="Temperatura ">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="99.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../../git/presencial-braincare/BrainCare/lib_images/temperatura_foto.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="nivelSangre" contentDisplay="TOP" layoutX="10.0" layoutY="68.0" mnemonicParsing="false" onAction="#mostrarNivelOxigeno" prefHeight="58.0" prefWidth="145.0" text="Nivel Oxigeno">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="99.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../../eclipse-workspace/BrainCare-BasesDatos/lib_images/oxigeno_foto.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="10.0" top="10.0" />
+         </padding>
+      </VBox>
+      <DatePicker fx:id="fecha" layoutX="412.0" layoutY="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
+   </children>
+</AnchorPane>
